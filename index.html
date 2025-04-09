@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Divcode</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicio</a></li>
+                <li><a href="#">Productos</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/logo.svg" alt="Logo" />
+            </div>
+            <div class="cart-icon" id="cart-toggle">
+                <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" />
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-container">
+        <div class="hero-text">
+            <h1>HAMBURGUESA</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nihil eius ab. Inventore, rerum aspernatur quae ipsa voluptas amet accusamus ab quas, minima expedita tenetur. Adipisci alias fugiat aliquam ex!</p>
+            <div class="hero-buttons">
+                <button>COMPRAR</button>
+                <button>MENÚ</button>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <span class="price-tag">$50.00</span>
+            <img src="images/slider1.png" alt="Hamburguesa"/>
+        </div>
+    </section>
+
+    <section class="productos container">
+        <h2>Hamburguesas</h2>
+        <div id="product-container" class="product-grid"></div>
+    </section>
+
+    <div id="cart-popup" class="cart-popup hidden">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: S/. <span id="total">0</span></p>
+        <button id="empty-cart">Vaciar carrito</button>
+    </div>
+
+    <section class="map-container">
+        <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240864.08481701676!2d-99.14361265000001!3d19.3907336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2zQ2l1ZGFkIGRlIE3DqXhpY28sIENETVgsIE3DqXhpY28!5e0!3m2!1ses-419!2spe!4v1707086843097!5m2!1ses-419!2spe"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

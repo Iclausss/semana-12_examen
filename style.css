@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  background-color: #111; /* Fondo negro para todo el encabezado */
+  padding: 20px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-icon img {
+  height: 30px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Elimina el margen superior para que esté pegado al header */
+  background-color: #111; /* Fondo negro para la sección de la hamburguesa */
+  color: white;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.hero-buttons button {
+  padding: 15px 30px;
+  border: 2px solid #f44336;
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-buttons button:hover {
+  background-color: #f44336;
+}
+
+.hero-image-container {
+  flex: 1;
+  position: relative;
+  text-align: right;
+}
+
+.hero-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.price-tag {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  z-index: 10;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: #333;
+}
+
+.productos {
+  padding: 40px 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.card {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e65c00;
+}
+
+/* Mapa */
+.map-container {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.map {
+	
+filter: grayscale(100%) invert(92%) contrast(93%);
+  width: 90%;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+  filter: grayscale(100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Carrito flotante */
+.cart-popup {
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cart-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.cart-popup h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.cart-popup ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 10px 0;
+}
+
+.cart-popup li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.cart-popup li button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-popup p {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#empty-cart {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none !important;
+}
